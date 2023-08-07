@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <h2>Making a new webPage</h2>
+        <p id="demo"></p>
+    </div>
+    <script>
+
+        // let userName = prompt("Enter Your name",'');
+
+        // function showMessage() {
+        //     let message = 'Hello  ' + userName;
+        //     alert(message);
+        // }
+
+        // showMessage();
+
+        // function mul(a,b){
+        //     return a*b;
+        // }
+        // let result = mul(4,5);
+        // alert(result);
+
+
+
+        // function power(x,y){
+        //      let x = prompt('Enter a Number','');
+        //      let y = prompt("Enter the power of number");
+        //     return x**=y;
+        // }
+        // let result = power(4,5);
+        // alert (result);
+
+        // function convert() {
+
+        //     let fvalue = prompt("Enter the Temperature in fahrenheit");
+        //     let Celcius = ("The value in celcius = " + (5 / 9) * (fvalue - 32));
+        //     alert(Celcius);
+        // }
+        // convert();
+
+        // function power() {
+
+        //     let number = prompt("Enter a number");
+        //     let power = prompt("Enter power for the number");
+        //     let result = Math.pow(number,power);
+
+        //     let output = ("The power for given number is = " + result);
+        //     alert(output);
+
+        // }
+
+        // power();
+
+        // power = () => {
+        //     let number = prompt("Enter a number");
+        //     let power = prompt("Enter power for the number");
+        //     let result = Math.pow(number, power);
+
+        //     let output = ("The power for given number is = " + result);
+        //     alert(output);
+        // }
+
+        // power();
+
+        // const person = {
+        //     fullName: function () {
+        //         return this.firstName + " " + this.lastName;
+        //     }
+        // }
+        // const person1 = {
+        //     firstName: "John",
+        //     lastName: "Doe"
+        // }
+        // const person2 = {
+        //     firstName: "Mary",
+        //     lastName: "Doe"
+        // }
+        // document.getElementById("demo").innerHTML = person.fullName.call(person2); 
+
+
+            const person = {
+                firstName : "hafiz",
+                lastName : "Awais",
+                fullname : function(){
+                    return this.firstName + " " + this.lastName;
+                }
+
+            }
+
+            const member = {
+                firstName : "Gul",
+                lastName : "Khan"
+            }
+
+            const intzaamia = {
+                firstName : "Ali",
+                lastName : "Raza"
+            }
+
+            let fullName = person.fullname.bind(intzaamia);
+            document.getElementById("demo").innerHTML = fullName();
+
+
+
+    </script>
+</body>
+
+</html>

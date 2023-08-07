@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('============ Q No 1 ==============')
+        /* Write a function that takes a string as input and removes all whitespace characters (spaces, tabs, newlines) from the string. */
+
+        // function RemoveSpaces(string) {
+        //     const result = string.replace(/\s/g, ''); 
+        //     console.log(result);
+        // }
+
+        // const string = " Hello buddy.   How are you doing? ";
+        // RemoveSpaces(string);
+
+
+        console.log('============ Q No 2 ==============')
+        /* Write a function that takes a string as input and returns the string with each word reversed (but the order of the words remains the same). Assume that words are separated by spaces. */
+
+        // function ReturnString(str) {
+
+        //     const reversed = str.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+        //     console.log(reversed);
+        // }
+
+        // str = "Apples are Red";
+        // ReturnString(str);
+
+        console.log('============ Q No 3 ==============')
+        /* Write a function that takes a string as input and returns the string with all the vowels replaced by dashes ("-"). */
+
+        // function replaceVowels(str) {
+
+        //      return str.replace(/[aeiou]/gi, "-");
+        // }
+
+        // str = "How are you doing?";
+
+        // console.log(replaceVowels(str));
+
+        console.log('============ Q No 4 ==============')
+        /* Write a function that takes an array of objects representing books with properties such as title and author, and returns a new array with only the titles of the books. */
+
+        // function TitleReturn(books) {
+
+        //     const newarr = [];
+
+        //     for (let i = 0; i < books.length; i++) {
+
+        //         const book = books[i];
+        //         newarr.push(book.title);
+        //     }
+
+        //     return newarr;
+        // }
+
+        // const books = [
+        //     { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+        //     { title: "To Kill a Mockingbird", author: "Harper Lee" },
+        //     { title: "1984", author: "George Orwell" },
+        //     { title: "Pride and Prejudice", author: "Jane Austen" },
+        //     { title: "The Catcher in the Rye", author: "J.D. Salinger" }
+        // ];
+
+        // console.log(TitleReturn(books));
+
+
+        console.log('============ Q No 5 ==============')
+        /* Write a function that takes an array of strings as input and returns a new array with the strings sorted in alphabetical order. */
+
+        // function sortingString(str){
+
+        //     return fruits.sort();
+
+        // }
+
+        // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        // console.log(sortingString(str));
+
+        console.log('============ Q No 6 ==============')
+        /*Write a function that takes a string as input and returns an object with the frequency count of each character in the string. */
+
+        // function countFrequency(str) {
+        //     const frequency = {};
+
+        //     for (let i = 0; i < str.length; i++) {
+        //         const char = str[i];
+        //         frequency[char] = (frequency[char] || 0) + 1;
+        //     }
+
+        //     return frequency;
+        // }
+
+        // const str = "My name id Gul";
+        // const charFrequency = countFrequency(str);
+
+        // console.log(charFrequency);
+
+
+        console.log('============ Q No 7 ==============')
+        /*Using a for loop, print the numbers from 1 to 10. */
+
+        // for (let index = 0; index < 11; index++) {
+        //     console.log(index);
+        // }
+
+        console.log('============ Q No 8 ==============')
+        /*let ‘s have an array ["Hello", "word", "in", "a", "frame"] and print it in a frame like attached in image */
+
+        // function printArrayInFrame(array) {
+        //     let maxWordLength = 0;
+        //     for (let i = 0; i < array.length; i++) {
+        //         if (array[i].length > maxWordLength) {
+        //             maxWordLength = array[i].length;
+        //         }
+        //     }
+        //     const horizontalLine = "*".repeat(maxWordLength + 4);
+        //     console.log(horizontalLine);
+        //     for (let i = 0; i < array.length; i++) {
+        //         const padding = maxWordLength - array[i].length;
+        //         const spaces = " ".repeat(padding);
+        //         console.log(`* ${array[i]}${spaces} *`);
+        //     }
+        //     console.log(horizontalLine);
+        // }
+
+        // const words = ["Hello", "world", "in", "a", "frame"];
+        // printArrayInFrame(words);
+
+        console.log('============ Q No 9 ==============')
+        /*let ‘s have an array ["Hello", "word", "in", "a", "frame"] and print it in a frame like attached in image */
+
+        // function MissingNumber(numbers) {
+        //     const series = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+        //     for (let i = 0; i < series.length; i++) {
+        //         if (!numbers.includes(series[i])) {
+        //             return series[i];
+        //         }
+        //     }
+
+        //     return null; // If no missing number is found
+        // }
+
+        // const numbers = [10, 11, 12, 13, 14, 16, 17, 18, 19, 20];
+        // const missingNumber = findMissingNumber(numbers);
+
+        // console.log("Missing number:", missingNumber);
+
+        console.log('============ Q No 10 ==============')
+        /*Write a function to remove a key from a object. */
+
+        // function removeKey(obj, key) {
+        //     return delete obj[key];
+        // }
+
+        // const obj = {
+        //     name: "John",
+        //     age: 30,
+        //     city: "New York"
+        // };
+
+        // const keyToRemove = "age";
+        // const keyRemoved = removeKey(obj, keyToRemove);
+
+        // console.log(obj);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

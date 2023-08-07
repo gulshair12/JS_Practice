@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Test Instructions:</h2>
+    <p>Read the statement of question and write your code accordingly. You can pass arguements to functions directly
+        while calling function from inside button and check result upon clicking on button. Result should be printed in
+        console using console.log()</p>
+    <button onclick="getNameOfCategoryByID(1)">Execute Fn 1</button>
+    <button onclick="getHighestQuantityOfProductAvailableByCategoryByID(2)">Execute Fn 2</button>
+    <button onclick="checkIfSpecificProductIsAvailableOrNot(1, 1, 101)">Execute Fn 3</button>
+    <button onclick="calculateTotalNumberOfProducts()">Execute Fn 4</button>
+    <button onclick="calculateAveragePriceOfProductsByCategoryId(1)">Execute Fn 5</button>
+    <button onclick="updateInStockAttributeOfGivenProduct(1, 1, 101, 10)">Execute Fn 6</button>
+    <button onclick="addNewVarientByCategoryID(1)">Execute Fn 7</button>
+    <button onclick="getProductOrPrintError(1, 'Black')">Execute Fn 8</button>
+    <button onclick="printValuesInSpecificPattern()">Execute Fn 9</button>
+    <button onclick="findSecondLargestAndSmallestValueInArray()">Execute Fn 10</button>
+
+    <script>
+        const shop = {
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Electronics",
+                    "products": [
+                        {
+                            "id": 1,
+                            "name": "iPhone 12",
+                            "price": 999,
+                            "variants": [
+                                {
+                                    "id": 101,
+                                    "color": "Black",
+                                    "storage": "128GB",
+                                    "inStock": 5
+                                },
+                                {
+                                    "id": 102,
+                                    "color": "White",
+                                    "storage": "128GB",
+                                    "inStock": 3
+                                },
+                                {
+                                    "id": 103,
+                                    "color": "Black",
+                                    "storage": "256GB",
+                                    "inStock": 7
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Samsung Galaxy S21",
+                            "price": 899,
+                            "variants": [
+                                {
+                                    "id": 201,
+                                    "color": "Phantom Black",
+                                    "storage": "128GB",
+                                    "inStock": 2
+                                },
+                                {
+                                    "id": 202,
+                                    "color": "Phantom Silver",
+                                    "storage": "128GB",
+                                    "inStock": 0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Clothing",
+                    "products": [
+                        {
+                            "id": 3,
+                            "name": "Kurta",
+                            "price": 29,
+                            "variants": [
+                                {
+                                    "id": 301,
+                                    "size": "Small",
+                                    "color": "Red",
+                                    "inStock": 10
+                                },
+                                {
+                                    "id": 302,
+                                    "size": "Medium",
+                                    "color": "Blue",
+                                    "inStock": 5
+                                }
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "name": "Abaya",
+                            "price": 79,
+                            "variants": [
+                                {
+                                    "id": 401,
+                                    "size": "Medium",
+                                    "color": "Black",
+                                    "inStock": 3
+                                },
+                                {
+                                    "id": 402,
+                                    "size": "Large",
+                                    "color": "Brown",
+                                    "inStock": 0
+                                }
+                            ]
+                        }
+                    ]
+                },
+            ]
+        }
+
+        const getNameOfCategoryByID = (categoryId) => {
+
+            const category = shop.categories.find((category) => category.id === categoryId);
+
+            console.log(`The name of category is: ${category.name}`);
+
+            console.log('Function 1 executed.');
+            // Q no 1. update function and write code that pass category ID as input and return the name of that category
+        }
+
+        const getHighestQuantityOfProductAvailableByCategoryByID = (categoryId) => {
+            let highestQuantityProduct = null;
+            let highestQuantity = 0;
+
+
+            const category = shop.categories.find((category) => category.id === categoryId);
+
+            if (category) {
+
+                category.products.forEach((product) => {
+                    product.variants.forEach((variant) => {
+                        if (variant.inStock > highestQuantity) {
+                            highestQuantity = variant.inStock;
+                            highestQuantityProduct = product;
+                        }
+                    });
+                });
+
+                if (highestQuantityProduct) {
+                    console.log(
+                        `Product with the highest in-stock quantity in the category '${category.name}' is:`,
+                        highestQuantityProduct
+                    );
+                }
+            }
+
+            console.log('Function 2 executed.');
+            // Q no 2. update function and write code that pass category id as an input, find and return it’s product variant with the highest in-stock quantity
+        }
+
+
+        const checkIfSpecificProductIsAvailableOrNot = (categoryId, productId, variantId) => {
+
+            const category = shop.categories.find((category) => category.id === categoryId);
+
+            if (category) {
+
+                const product = category.products.find((product) => product.id === productId);
+
+                if (product) {
+
+                    const variant = product.variants.find((variant) => variant.id === variantId);
+
+                    if (variant) {
+                        const isAvailable = variant.inStock > 0;
+                        console.log(isAvailable);
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+
+            console.log('Function 3 executed.');
+            // Q no 3. update function and write code that checks if a specific product variant is in stock, The function should take a category ID, product ID, and variant ID as input, and return a boolean value indicating its availability.
+        };
+
+        const calculateTotalNumberOfProducts = () => {
+            let totalInStockProducts = -1;
+
+
+            for (let category of shop.categories) {
+
+                for (let product of category.products) {
+
+                    for (let variant of product.variants) {
+
+                        totalInStockProducts += variant.inStock;
+                    }
+                }
+            }
+
+            console.log(`Total number of in-stock products: ${totalInStockProducts}`);
+
+            console.log('Function 4 executed.');
+            // Q no 4. update function and write code that calculates and returns the total number of in-stock products in the entire data set
+        };
+
+        const calculateAveragePriceOfProductsByCategoryId = (categoryId) => {
+            const category = shop.categories.find((category) => category.id === categoryId);
+
+            if (category) {
+
+                let sumOfPrices = 0;
+                let numberOfProducts = 0;
+
+                for (let product of category.products) {
+                    sumOfPrices += product.price;
+                    numberOfProducts++;
+                }
+
+                const averagePrice = sumOfPrices / numberOfProducts;
+
+                console.log(`Average price of products in selected category : ${averagePrice}`);
+            }
+
+            console.log('Function 5 executed.');
+            // Q no 5. update function and write code that takes a category ID as input and returns the average price of products within that category
+        };
+
+        const updateInStockAttributeOfGivenProduct = (categoryId, productId, variantId, stockQuantity) => {
+
+            const category = shop.categories.find((category) => category.id === categoryId);
+
+
+
+            if (category) {
+                const product = category.products.find((product) => product.id === productId);
+
+                if (product) {
+                    const variant = product.variants.find((variant) => variant.id === variantId);
+
+                    if (variant) {
+                        console.log(`Before InStock attribute of given variant is ${variant.inStock}.`);
+                        variant.inStock = stockQuantity;
+                        console.log(`After Updating inStock attribute of given variant to ${variant.inStock}.`);
+                    }
+                }
+            }
+
+            console.log('Function 6 executed.');
+            // Q no 6. update function and write code takes a category ID, product ID and variant ID and stock quantity as input and updates the inStock property of that variant.
+        };
+
+        const addNewVarientByCategoryID = (categoryId, newVariantDetail) => {
+            const category = shop.categories.find((category) => category.id === categoryId);
+
+            if (category) {
+                const product = category.products[0];
+
+                if (product) {
+
+                    const newVariantId = Math.floor(Math.random() * 1000);
+
+                    product.variants.push({ id: newVariantId, ...newVariantDetail });
+
+                    console.log(`New variant added to category with ID ${categoryId}:`, product.variants);
+                }
+            }
+            console.log('Function 7 executed.');
+        };
+
+        addNewVarientByCategoryID(1, {
+            color: 'Blue',
+            storage: '64GB',
+            inStock: 10
+        });
+
+
+        const getProductOrPrintError = (categoryId, variantName) => {
+            const category = shop.categories.find((category) => category.id === categoryId);
+
+            if (category) {
+                const product = category.products[0];
+
+                if (product) {
+                    const variant = product.variants.find((variant) => variant.color === variantName);
+
+                    if (variant) {
+                        console.log(`Variant details for given variant name "${variantName}":`, variant);
+                    } else {
+                        console.log("Variant  doesn't exist for the given category");
+                    }
+                }
+            }
+            console.log('Function 8 executed.');
+            // Q no 8. update function and write code that takes category id and name of varient. It shoud return specific varient details and if varient doesn't exist print error "Varient doesn't exist for given category"
+        };
+
+        const printValuesInSpecificPattern = () => {
+
+            for (let i = 1; i < 6; i++) {
+                let pattern = "";
+                for (let j = 1; j <= i; j++) {
+                    pattern += j + " ";
+                }
+                console.log(pattern);
+            }
+            console.log('Function 9 executed.');
+
+
+            // Q no 9. update function and write code that prints the pattern shown below.
+            /*
+            1
+            1 2
+            1 2 3
+            1 2 3 4
+            1 2 3 4 5
+            */
+        }
+
+        const findSecondLargestAndSmallestValueInArray = () => {
+
+            arr.sort((a, b) => a - b);
+
+            // Find the second smallest and second largest values
+            let secondSmallest = arr[1];
+            let secondLargest = arr[arr.length - 2];
+
+            // Print the results
+            console.log(`Second Smallest Value: ${secondSmallest}`);
+            console.log(`Second Largest Value: ${secondLargest}`);
+        };
+
+        const arr = [100, 90, 35, 9, 20, 58, 78, 90, 20, 19, 10, 9]
+    </script>
+</body>
+
+</html>

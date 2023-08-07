@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice.css">
+</head>
+
+<body>
+    <div>
+        <h2>Making a new webPage</h2>
+        <!-- <button onclick="alsort()"> Sort Alphabatically</button>
+        <button onclick="numsort()"> Sort Numerically</button> -->
+
+        <p id="demo"></p>
+        <!-- <p id="par2"></p> -->
+    </div>
+
+    <script>
+
+        // const cars =["Ford", "BMW", "Mercedes", "Audi"]
+        // alert(cars[2]);
+
+        // const cars =["Ford", "BMW", "Mercedes", "Audi"]
+        // alert(cars);
+
+        // const cars =["Ford", "BMW", "Mercedes", "Audi"]
+        // alert(cars.length);
+
+        // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // let fLen = fruits.length;
+
+        // let text = "<ul>";
+        // for (let i = 0; i < fLen; i++) {
+        //     text += "<li>" + fruits[i] + "</li>";
+        // }
+        // text += "</ul>";
+
+        // console.log(text);
+
+        // const cars =["Ford", "BMW", "Mercedes", "Audi"]
+        // cars.push("Mustang");
+        //  alert(cars);
+
+
+        // const cars =["Ford", "BMW", "Mercedes", "Audi"]
+        // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // const mixup = cars.concat(fruits);
+        // alert(mixup);
+
+        // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // // const sfruits = fruits.sort()
+        // alert(fruits.sort());
+
+        // const points = [40, 100, 1, 5, 25, 10];
+        // points.sort(function (a, b) { return a - b });
+        // alert(points);
+
+        // const points = [40, 100, 1, 5, 25, 10];
+        // document.getElementById("para").innerHTML = points;
+
+        // function alsort(params) {
+
+        //     points.sort();
+        //     document.getElementById("para").innerHTML = points;
+        // }
+
+        // function numsort(params) {
+        //     points.sort(function (a, b) { return a - b });
+        //     document.getElementById("para").innerHTML = points;
+
+        // }
+
+        // document.getElementById("par2").innerHTML = "Heloo Every body";
+
+        // const numbers = [45, 4, 9, 16, 25];
+        // let txt = "";
+        // numbers.forEach(myFunction);
+        // document.getElementById("demo").innerHTML = txt;
+
+        // function myFunction(value, index, array) {
+        //     txt += value + "<br>"; 
+        // }
+
+
+        // const numbers1 = [45, 4, 9, 16, 25];
+        // const numbers2 = numbers1.map(myFunction);
+        // document.getElementById("demo").innerHTML = numbers2;
+
+        // function myFunction(value, index, array) {
+        //     return value * 2;
+        // }
+
+        const arr = [2,4,6,8,10];
+        const newArr = arr.flatMap((x)=> x*2);
+        document.getElementById("demo").innerHTML = newArr;
+    </script>
+</body>
+
+</html>

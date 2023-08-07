@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('============ Q No 1 ==============')
+        /* Write a function that accepts two strings and returns the minimum number of distinct letters of a string S, that can be constructed from A and B as described above. */
+
+        function countDistinctLetters(A, B) {
+            const aValues = A.split("");
+            const bValues = B.split("");
+            let count = 0;
+
+            for (let i = 0; i < aValues.length; i++) {
+                for (let j = 0; j < bValues.length; j++) {
+                    if (aValues[i] !== bValues[j]) {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
+        }
+
+        // Example usage:
+        const A = "ca";
+        const B = "ab";
+        const distinctCount = countDistinctLetters(A, B);
+
+        console.log("Minimum number of distinct letters:", distinctCount);
+
+
+        console.log('============ Q No 2 ==============')
+
+        const STUDENTS = [
+            {
+                name: 'John',
+                validityDate: '2030-12-30'
+            },
+            {
+                name: 'Jane',
+                validityDate: '2030-05-25'
+            },
+            {
+                name: 'Adam',
+                validityDate: '2030-11-11'
+            },
+            {
+                name: 'Bonnie',
+                validityDate: '2008-11-11'
+            },
+            {
+                name: 'Dhilip',
+                validityDate: '2030-12-30'
+            },
+            {
+                name: 'Falude',
+                validityDate: '2020-05-25'
+            },
+            {
+                name: 'Damiyen',
+                validityDate: '2030-11-11'
+            },
+            {
+                name: 'Talisk',
+                validityDate: '2023-11-11'
+            }
+        ];
+        function checkValidity(studentName, joiningDate, validityDate) {
+            let isValid = false;
+            for (let i = 0; i < STUDENTS.length; i++) {
+                const student = STUDENTS[i];
+                if (student.name === studentName) {
+                    isValid = true;
+                    if (joiningDate > student.validityDate) {
+                        console.log(`Sorry, ${studentName}'s validity has expired.`);
+                        return;
+                    }
+                    break;
+                }
+            }
+            if (!isValid) {
+                console.log(`Sorry, ${studentName} is not in the student list.`);
+                return;
+            }
+            console.log(`${studentName}'s joining date is valid.`);
+        }
+        const studentNameInput = prompt("Enter student name:");
+        const joiningDateInput = prompt("Enter joining date (YYYY-MM-DD):");
+        checkValidity(studentNameInput, joiningDateInput, "2030-12-31");
+
+
+
+
+    </script>
+</body>
+
+</html>

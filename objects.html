@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <h2>Making a new webPage</h2>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+
+        // const car = {
+        //     Name: "Mustang 1969",
+        //     Speed: "240 KMPH",
+        //     color: "Black",
+        //     Body: "Classic"
+        // };
+
+        // car.Model = "Shelby";
+
+        // delete car.color;
+
+        // let txt = "";
+        // for (let x in car) {
+        //     txt += car[x] + ` <br> `;
+        // }
+
+        // console.log(txt);
+
+        //Nested Objects
+
+        // const myObj = {
+        //     name: "John",
+        //     age: 30,
+        //     cars: {
+        //         car1: "Ford",
+        //         car2: "BMW",
+        //         car3: "Fiat"
+        //     }
+        // }
+        // document.getElementById("demo").innerHTML = myObj.cars.car1 + " "+  myObj.cars.car2 + " "+  myObj.cars.car3;
+
+        // let txt = "";
+        // const myObj = {
+
+        //     name: "Henry",
+        //     age: 30,
+        //     cars: [
+        //         { name: "Ford", models: ["Feista", "Foucus", "Mustang"] },
+        //         { name: "BMW", models: ["X3", "X5", "X6"] },
+        //         { name: "Merdcedes", models: ["Sedan", "SUV", "Electric"] },
+        //     ]
+        // }
+
+        // for (let i in myObj.cars) {
+        //     txt += "<h2>" + myObj.cars[i].name + "</h2>";
+        //     for (let j in myObj.cars[i].models) {
+        //         txt += myObj.cars[i].models[j] + "<br>";
+        //     }
+        // }
+        // document.getElementById("demo").innerHTML = txt;
+
+        // Object Methods
+
+        // const person = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        //     id: 5566,
+        //     fullName: function () {
+        //         return (this.firstName + " " + this.lastName);
+        //     } 
+        // }
+
+        // document.getElementById("demo").innerHTML = person.fullName().toLocaleUpperCase();
+
+        // const person = {
+        //     name: "John",
+        //     age: 30,
+        //     city: "New York"
+        // };
+
+        // document.getElementById("demo").innerHTML = JSON.stringify(person);
+
+        // const person = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        //     language: "Null",
+        //     set lang(value) {
+        //         return this.language = value.toUpperCase();
+        //     }
+        // };
+
+
+        // person.lang = "English";
+
+        // document.getElementById("demo").innerHTML = person.language;
+
+        // const person = {
+        //     name: "John",
+        //     age: 30,
+        //     city: "New York",
+        //     language : "English",
+        //     get lang(){
+        //         return this.language.toUpperCase();
+        //     }
+        // };
+
+        // document.getElementById("demo").innerHTML = person.lang;
+
+        // Constructor function for Person objects
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+
+        // Create 2 Person objects
+        const myFather = new Person("Aslam", "Hayat", 50, "blue");
+        const myMother = new Person("Sally", "Rally", 48, "green");
+
+        // Add nationality to first object
+        myFather.nationality = "English";
+
+        // Add a name method to first object
+        myFather.name = function () {
+            return this.firstName + " " + this.lastName;
+        };
+
+        // Display nationality 
+        document.getElementById("demo").innerHTML =
+            "My father is " + myFather.name();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('============ Q No 1 ==============')
+        /* Write a function to remove spaces from following object keys.  {'S  001': ['Math', 'Science'], 'S    002': ['Math', 'English']} */
+
+        // const Subjects = {
+        //     'S  001': ['Math', 'Science'],
+        //     'S    002': ['Math', 'English'],
+        // };
+
+        // function removeSpaces() {
+        //     const newObject = {};
+
+        //     Object.keys(Subjects).forEach(key => {
+        //         const newKey = key.replace(/\s/g, '');
+        //         newObject[newKey] = Subjects[key];
+        //     });
+
+        //     return newObject;
+        // }
+
+        // const newObject = removeSpaces();
+        // console.log(newObject);
+
+        console.log('============ Q No 2 ==============')
+        /* Write a function to find the specified number of maximum values in a given object.
+         Object: {'a': 5, 'b': 14, 'c': 32, 'd': 35, 'e': 24, 'f': 100, 'g': 57, 'h': 8, 'i': 100} 
+          Expected output:
+        1 maximum value(s) in the said dictionary: ['f' : 2]
+        2 maximum value(s) in the said dictionary: ['f', 'i']
+        5 maximum value(s) in the said dictionary: ['f', 'i', 'g', 'd', 'c']
+        */
+
+        // const numericValues = { 'a': 5, 'b': 14, 'c': 32, 'd': 35, 'e': 24, 'f': 100, 'g': 57, 'h': 8, 'i': 100 };
+
+        // function maxValues(count) {
+        //     const sortedValues = Object.entries(numericValues).sort((a, b) => b[1] - a[1]);
+        //     const maxnumberValues = sortedValues.slice(0, count).map(entry => entry[0]);
+
+        //     console.log(maxnumberValues);
+        // }
+
+        // maxValues(4);
+
+        console.log('============ Q No 3 ==============')
+        /* Write a program to get the total length of all values in a given dictionary with string values.
+        object = {'#FF0000':'Red', '#800000':'Maroon', '#FFFF00':'Yellow', '#808000':'Olive'}
+        Expected output is “20”
+        */
+
+        // const colors = {'#FF0000':'Red', '#800000':'Maroon', '#FFFF00':'Yellow', '#808000':'Olive'};
+
+        // function valuesLength(){
+
+        //     let colorsValues = Object.entries(colors).map(value => value[1]).join("").length
+        //     console.log(colorsValues);
+        // }
+
+        // valuesLength();
+
+
+
+    </script>
+</body>
+
+</html>

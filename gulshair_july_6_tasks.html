@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('============ Q No 1 ==============')
+
+        /* Create an object representing a car with properties such as make, model, and year. Print out a sentence that includes the car's make, model, and year. */
+
+        // const car = {
+
+        //     Name: "Tesla",
+        //     Model: "S",
+        //     Year: "2019"
+        // }
+
+        // console.log(`This is ${car.Name} Model ${car.Model} from Year ${car.Year} `);
+
+
+        console.log('============ Q No 2 ==============')
+
+        /* Using a for loop, print the elements of an array in reverse order */
+
+        // arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // for (let i = arr.length; i >= 0; i--) {
+
+        //     console.log(arr[i]);
+        // }
+
+        console.log('============ Q No 3 ==============')
+
+        /* Create an object representing a book with properties such as title, author, and number of pages. Write a function that takes a book object as input and prints out the book's title and author. */
+
+        // const book = {
+        //     title: "The Book of Five Rings",
+        //     author: "Miyamoto Musashi",
+        //     pageNumber: "232",
+        //     bookdetail: function () {
+        //         return this.title + " is written by " + this.author;
+        //     }
+        // };
+
+        // console.log(book.bookdetail());
+
+
+        console.log('============ Q No 4 ==============')
+
+        /* Create an object representing a shopping cart with properties such as items (an array of items) and total (the total cost of the items). Write a function that adds an item to the shopping cart and updates the total cost. */
+
+        // const ShoppingCart = {
+        //     items: ["Sugar", "Milk", "Honey", "Cookies"],
+        //     totalCost: 1200,
+        //     addItem: function () {
+        //         this.items.push("Soap");
+        //         this.totalCost += 60;
+        //         return "Items list: " + this.items + "  Total cost: " + this.totalCost;
+        //     }
+        // };
+
+        // console.log(ShoppingCart.addItem());
+
+
+        console.log('============ Q No 5 ==============')
+
+        /* Create an object representing a bank account with properties such as account number and balance. Write functions to deposit and withdraw money from the account and print the current balance. */
+
+        // const bankAccount = {
+        //     accountNumber: "1122356945",
+        //     balance: 1000,
+
+        //     deposit: function () {
+        //         const amount = parseFloat(prompt("Enter the amount to deposit:"));
+        //         if (!isNaN(amount) && amount > 0) {
+        //             bankAccount.balance += amount;
+        //             console.log("Deposit successful. Current balance: " + bankAccount.balance);
+        //         } else {
+        //             console.log("Invalid amount. Deposit failed.");
+        //         }
+        //     },
+
+        //     withdraw: function () {
+        //         const amount = parseFloat(prompt("Enter the amount to withdraw:"));
+        //         if (!isNaN(amount) && amount > 0) {
+        //             if (amount <= bankAccount.balance) {
+        //                 bankAccount.balance -= amount;
+        //                 console.log("Withdrawal successful. Current balance: " + bankAccount.balance);
+        //             } else {
+        //                 console.log("Insufficient funds. Current balance: " + bankAccount.balance);
+        //             }
+        //         } else {
+        //             console.log("Invalid amount. Withdrawal failed.");
+        //         }
+        //     },
+
+        //     printBalance: function () {
+        //         console.log("Current balance: " + bankAccount.balance);
+        //     }
+        // };
+
+        // bankAccount.deposit();
+
+        // bankAccount.withdraw();
+
+        // bankAccount.printBalance();
+
+
+        console.log('============ Q No 6 ==============')
+
+        /* Create an object representing a student with properties such as name, grade, and subjects (an array of subjects). Write a function that adds a subject to the student's list of subjects. */
+
+        // const Students = {
+
+        //     name: "Gulshair",
+        //     grade: "A",
+        //     subjects: ["Computer Science", "Math", "Physics"],
+        //     addsubject: function () {
+
+        //         this.subjects.push("English")
+        //         return this.name + " is studying " + this.subjects;
+        //     }
+
+        // }
+
+        // console.log(Students.addsubject());
+
+        console.log('============ Q No 7 ==============')
+
+        /* Create an object representing a movie with properties such as title, director, and rating. Write a function that changes the rating of the movie and prints out the updated rating */
+
+        // const Movie = {
+        //     title: 'Titanic',
+        //     director: 'James Cameron',
+        //     rating: '4.6/5',
+        //     updateRating: function () {
+        //         this.rating = this.rating.replace('4.6/5', '4.9/5');
+        //         return this.director + ' Movie ' + this.title + ' has ' + this.rating;
+        //     }
+        // };
+
+        // console.log(Movie.updateRating());
+
+
+        console.log('============ Q No 8 ==============')
+
+        /* Create an object representing a restaurant with properties such as name, cuisine, and rating. Write a function that updates the rating of the restaurant based on user input. */
+
+        // const Restaurant = {
+        //     name: "Banu Polao restaurant",
+        //     cuisine: "Polao",
+        //     rating: "5.0 rating",
+        //     updaterating: function () {
+        //         const updatedRating = prompt("Enter your rating for the restaurant: ");
+        //         this.rating = this.rating.replace(/[\d\/]+/, updatedRating);
+        //         return " You have rated banu polao restaurant " + this.rating;
+        //     }
+        // };
+
+        // console.log(Restaurant.updaterating());
+
+        console.log('============ Q No 9 ==============')
+
+        /* Create an object representing a recipe with properties such as name, ingredients (an array of ingredients), and instructions. Write a function that prints out the ingredients of the recipe. */
+
+        // const Recipe = {
+
+        //     name: "Biryani",
+        //     ingredients: ["Chicken", "Eggs", "Dried fruits", "Vegetables", "Potatoes"],
+        //     instrctions: "Put the boiling water in a saucepan, add the washed rice, boil for 5 minutes and drain. Layer the chicken mixture with the rice starting with the rice then the chicken mixture and repeat this twice. Garnish with cumin seeds, and ginger. Lower the heat and simmer for a further 10 minutes.",
+
+        //     printIngredients: function () {
+
+        //         return this.name + " have following Ingredients " + this.ingredients;
+        //     }
+        // }
+
+        // console.log(Recipe.printIngredients());
+
+        console.log('============ Q No 10 ==============')
+
+        /* Create an object representing a computer with properties such as brand, processor, and price. Write a function that checks if the computer is within a given budget.. */
+
+        // const Computer = {
+
+        //     Brand: "Lenovo",
+        //     processor: "i9-1300H",
+        //     price: " RS. 2100000",
+        //     checkPrice: function () {
+
+        //         let budget = parseInt(prompt("Enter your budget to buy computer: "));
+
+        //         if (budget <= 2100000) {
+        //             console.log("You cannot Buy this computer");
+        //         }
+        //         else {
+        //             console.log("This computer is affordable");
+        //         }
+
+        //     }
+
+        // }
+
+        // Computer.checkPrice();
+
+        console.log('============ Q No 11 ==============')
+
+        /*Given an array of numbers, create a new array that only contains the even numbers. */
+
+        // function Checkeven(arr) {
+        //     let arr1 = [];
+        //     for (let numbers of arr) {
+        //         if (numbers % 2 == 0) {
+        //             arr1.push(numbers);
+        //         }
+        //     }
+        //     return arr1;
+        // }
+        // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // let result = Checkeven(arr);
+        // console.log(result);
+
+
+        console.log('============ Q No 12 ==============')
+
+        /* Given an array of strings, create a new array that only contains strings with more than 5 characters */
+
+        // const array = ["apple", "banana", "kiwi", "grapefruit", "orange", "mango"];
+
+        // const newArray = array.filter(str => str.length > 5);
+
+        // console.log(newArray);
+
+        console.log('============ Q No 13 ==============')
+
+        /* Given an array of objects representing students with properties such as name and grade, create a new array that only contains students with a grade higher than or equal to 90. */
+
+        // const students = [
+        //     { name: "Gulshair", grade: 90 },
+        //     { name: "Asad", grade: 80 },
+        //     { name: "Saad", grade: 93 },
+        //     { name: "Yasir", grade: 90 },
+        //     { name: "Mobeen", grade: 83 }
+        // ];
+
+        // const highAchievers = students.filter(student => student.grade >= 90);
+
+        // console.log(highAchievers);
+
+        console.log('============ Q No 14 ==============')
+
+        /* Given an array of objects representing books with properties such as title and author, create a new array that only contains books written by a specific author. */
+
+        // const books = [
+        //     { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+        //     { title: "To Kill a Mockingbird", author: "Harper Lee" },
+        //     { title: "1984", author: "George Orwell" },
+        //     { title: "Pride and Prejudice", author: "Jane Austen" },
+        //     { title: "The Catcher in the Rye", author: "J.D. Salinger" }
+        // ];
+
+        // const specificAuthor = "George Orwell";
+
+        // const booksByAuthor = books.filter(book => book.author === specificAuthor);
+
+        // console.log(booksByAuthor);
+
+
+        console.log('============ Q No 15 ==============')
+
+        /* Given an array of numbers, create a new array that only contains numbers greater than 10. */
+
+        // const numbers = [1, 5, 15, 10, 20 , 30, 40, 50, 8]
+
+        // const greaterNumbers = numbers.filter(number => number > 10);
+
+        // console.log(greaterNumbers);
+
+
+    </script>
+</body>
+
+</html>

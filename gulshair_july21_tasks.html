@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('============ Q No 1 ==============')
+        /*Write a function that takes a sentence as input and returns the word with the highest number of repeated letters. If there are multiple words with the same number of repeated letters, return the first one found. */
+
+        // function repeatedLetter(sentence) {
+        //     const words = sentence.split(' ');
+        //     let biggestWord = '';
+        //     let highestRepeatedLetters = 0;
+
+        //     for (let i = 0; i < sentence.length; i++) {
+
+        //         for (const word of words) {
+        //             const repeatedLetters = word.toLowerCase().split('').filter((letter, index, arr) => arr.indexOf(letter) !== index);
+        //             const repeatedLettersCount = repeatedLetters.length;
+        //             if (repeatedLettersCount > highestRepeatedLetters) {
+        //                 biggestWord = word;
+        //                 highestRepeatedLetters = repeatedLettersCount;
+        //             }
+        //         }
+
+        //     }
+        //     console.log(biggestWord);
+        // }
+
+        // const sentence = "Minimum number of values you should remember is seventeen";
+        // repeatedLetter(sentence);
+
+        console.log('============ Q No 2 ==============')
+        /* Implement a function that takes an array of integers as input and returns the longest contiguous subarray with an equal number of even and odd numbers. */
+
+        // function checkArray(array) {
+        //     let longestSubarray = [];
+
+        //     for (const arr of array) {
+        //         let evenCount = 0;
+        //         let oddCount = 0;
+        //         let subarray = [];
+
+        //         for (const num of arr) {
+        //             if (num % 2 === 0) {
+        //                 evenCount++;
+        //             } else {
+        //                 oddCount++;
+        //             }
+
+        //             subarray.push(num);
+
+        //             if (evenCount === oddCount && subarray.length > longestSubarray.length) {
+        //                 longestSubarray = subarray.slice();
+        //             }
+        //         }
+        //     }
+
+        //     console.log(longestSubarray);
+        // }
+
+        // const array = [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6], [1, 1, 2, 3, 2, 1, 2], [9, 2, 3, 2, 1]];
+        // checkArray(array);
+
+
+
+        console.log('============ Q No 3 ==============')
+        /* Create a function that takes an object representing a person with properties such as name, age, and hobbies (an array of strings). The function should return the name of the oldest person who has a specific hobby. */
+
+
+        // function oldestPersonWithHobby(array, hobby) {
+        //     let oldestPerson = null;
+
+        //     for (const person of array) {
+        //         if (person.hobbies.includes(hobby)) {
+        //             if (!oldestPerson || person.age > oldestPerson.age) {
+        //                 oldestPerson = person;
+        //             }
+        //         }
+        //     }
+
+        //     return oldestPerson ? oldestPerson.name : "No person with the specified hobby found.";
+        // }
+
+        // const array = [
+        //     { name: 'Ali', age: 30, hobbies: ['playing', 'travelling', 'singing'] },
+        //     { name: 'Umar', age: 22, hobbies: ['playing', 'singing'] },
+        //     { name: 'Awais', age: 33, hobbies: ['reading', 'eating', 'development'] }
+        // ];
+
+        // const hobby = 'playing';
+        // const result = oldestPersonWithHobby(array, hobby);
+        // console.log("Oldest person with the " + hobby + " hobby :", result);
+
+
+        console.log('============ Q No 4 ==============')
+        /*  Write a function that takes a string as input and returns the most frequent word that is not a stop word (e.g., "the", "and", "in"). The function should ignore case and consider all non-alphabetic characters as word delimiters. */
+
+
+        // function frequentNonStopWord(input) {
+        //     const stopWords = new Set(["the", "and", "in", "is", "this"]);
+        //     const wordCount = {};
+        //     const words = input.toLowerCase().split(/[^a-z]+/);
+
+        //     for (const word of words) {
+        //         if (word && !stopWords.has(word)) {
+        //             if (word in wordCount) {
+        //                 wordCount[word]++;
+        //             } else {
+        //                 wordCount[word] = 1;
+        //             }
+        //         }
+        //     }
+
+        //     let mostFrequentWord = null;
+        //     let highestFrequency = 0;
+
+        //     for (const word in wordCount) {
+        //         if (wordCount[word] > highestFrequency) {
+        //             mostFrequentWord = word;
+        //             highestFrequency = wordCount[word];
+        //         }
+        //     }
+
+        //     console.log(mostFrequentWord);
+        // }
+
+        // const input = "This is the example input string. The input string contains words.";
+        // frequentNonStopWord(input);
+
+
+        console.log('============ Q No 6 ==============')
+        /*  Create a function that takes an object representing a store inventory with properties such as item name, price, and stock quantity. The function should return the total value of all items in stock. */
+
+
+        // function calculateTotalValue(inventory) {
+        //     let totalValue = 0;
+
+        //     for (const item of inventory) {
+        //         const itemValue = item.price * item.stock;
+        //         totalValue += itemValue;
+        //     }
+
+        //     console.log(totalValue);
+        // }
+
+        // const inventory = [
+        //     { name: 'potato', price: 10, stock: 5 },
+        //     { name: 'rice', price: 15, stock: 3 },
+        //     { name: 'mangoes', price: 20, stock: 2 }
+        // ];
+
+        // calculateTotalValue(inventory);
+
+
+        console.log('============ Q No 7 ==============')
+        /* Write a function that takes a string of mathematical expressions (e.g., "3 * (2 + 5) / 4") as input and returns the result of the expression. The function should handle parentheses and basic arithmetic operators (+, -, *, /). */
+
+        // function mathExpression(expression) {
+
+        //     const result = eval(expression);
+        //     console.log(result);
+        // }
+
+        // const expression = "8 * (3 + 9) / 2";
+        // mathExpression(expression);
+
+
+        console.log('============ Q No 8 ==============')
+        /*  Implement a function that takes an array of numbers as input and returns the longest subarray with consecutive elements in ascending order. */
+
+        // function longestConsecutiveSubarray(arr) {
+        //     let longestSubarray = [];
+        //     let currentSubarray = [];
+
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (i === 0 || arr[i] === arr[i - 1] + 1) {
+        //             currentSubarray.push(arr[i]);
+        //         } else {
+        //             if (currentSubarray.length > longestSubarray.length) {
+        //                 longestSubarray = currentSubarray;
+        //             }
+        //             currentSubarray = [arr[i]];
+        //         }
+        //     }
+
+        //     if (currentSubarray.length > longestSubarray.length) {
+        //         longestSubarray = currentSubarray;
+        //     }
+
+        //     console.log(longestSubarray);
+        // }
+
+        // const arr = [[1, 2, 5, 4, 3], [1, 3, 6, 4, 9, 0], [3, 2, 1, 2], [3, 2, 1]];
+
+        // longestConsecutiveSubarray(arr);
+        
+
+        console.log('============ Q No 9 ==============')
+        /* Create a function that takes an array of objects representing products with properties such as name, price, and quantity. The function should return the most cost-effective combination of products to purchase that equals a specific budget. */
+
+        // function costEffectiveCombination(products, budget) {
+        //     let remainingBudget = budget;
+        //     const selectedProducts = [];
+
+        //     for (let i = 0; i < products.length; i++) {
+        //         const product = products[i];
+        //         const affordableQuantity = Math.min(product.quantity, Math.floor(remainingBudget / product.price));
+
+        //         if (affordableQuantity > 0) {
+        //             selectedProducts.push({ ...product, quantity: affordableQuantity });
+        //             remainingBudget -= product.price * affordableQuantity;
+        //         }
+        //     }
+
+        //     console.log(selectedProducts);
+        // }
+
+        // // Test the function with the provided input
+        // const products = [
+        //     { name: 'potato', price: 10, quantity: 5 },
+        //     { name: 'rice', price: 15, quantity: 3 },
+        //     { name: 'mangoes', price: 20, quantity: 2 }
+        // ];
+        // const budget = 90;
+        // costEffectiveCombination(products, budget);
+
+
+        console.log('============ Q No 10 ==============')
+        /*  Write a function that takes an array of strings as input and returns an object with the frequency count of words in the array. The function should ignore case and consider all non-alphabetic characters as word delimiters. */
+
+        // function wordFrequencyCount(sentences) {
+        //     const frequencyCount = {};
+
+        //     for (const sentence of sentences) {
+        //         const words = sentence.toLowerCase().split(/\W+/);
+
+        //         for (const word of words) {
+        //             if (word.match(/[a-z]+/)) {
+        //                 frequencyCount[word] = (frequencyCount[word] || 0) + 1;
+        //             }
+        //         }
+        //     }
+
+        //     console.log(frequencyCount);
+        // }
+
+        // // Test the function with the example input
+        // const sentences = [
+        //     "This is the first sentence.",
+        //     "The second sentence is longer.",
+        //     "This is the third sentence.",
+        // ];
+
+        // wordFrequencyCount(sentences);
+
+
+    </script>
+</body>
+
+</html>

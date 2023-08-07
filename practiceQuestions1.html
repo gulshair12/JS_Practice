@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    ​
+    <h2>JavaScript Practice exercises</h2>
+    <script>
+        console.log('============ Q No 1 ==============')
+        /* What is Javascript and write down where it is used? */
+
+        // Javascript is a scripting language that is used for making html pages dynamic. We can use it for several different puposes like Adding events manipulatinng html and css. Manipulatinng DOM and also much more.
+
+        console.log('============ Q No 2 ==============')
+        /* Let suppose you have a paragraph element having an id 'paragraph,' how can you replace its content with your name? */
+
+        // We can use following code to manipulate an element of HTML document
+        // document.getElementById('paragraph').innerHTML = "Gulshair";
+
+        console.log('============ Q No 3 ==============')
+        /* How can we declare a variable and what are the different ways to declare */
+
+        // There are three different ways to declare a variable in Javsscript
+        // Old method is            var name = "Gulshair"; 
+        // In ES6                   let name = "Gulshair"; 
+        // Another method is        const name = "Gulshair"; 
+
+        console.log('============ Q No 4 ==============')
+        /* What is the logical operator for "not equal value or not equal type" statement? */
+
+        //Logical operator for not equal vlaue is " != " meanwhile not equal type operator is " !== " as it strictly checks two oprands for not only value but also datatypes.
+
+        console.log('============ Q No 5 ==============')
+        /* Write down different data types used in programming languages? */
+
+        // Different Data Types in JavaScript are:
+        // String
+        // Number
+        // BigInt
+        // bolean 
+        // Null
+        // Undefined
+        // Object
+
+        console.log('============ Q No 6 ==============')
+        /* What is a function and its scope? Describe with an example. */
+
+        // Function is bascially a piece of code that has some code in it and it performes a specific task. The main reason we use it beause it makes it code more manageable as we can call it whenever we want in the code base. A scope of function is about variables like we can access variables outside of the function but we cannot use a which variable declared in the function outside of that function.
+
+        // let c = 20;
+        // function myFunction() {
+        //     let a = 12;
+        //     let b = 10;
+        //     let multiple = a * b;
+        //     let result = multiple * c;
+        //     console.log(result);
+        // }
+
+        // myFunction();
+
+        // Here we can see that we can acces variable "c" outside of the function but cannot acces those declared in fuction outside of it scope.
+
+        console.log('============ Q No 7 ==============')
+        /*What is an object and its writing style? What are the different ways to access object properties? */
+
+        // Object is a datatype in JavaScript that contains properties and methods for a declared object. It is used widely in JS.
+
+        // let person = 
+        // {   name: 'John', 
+        //      age: 28,
+        //      Company : "Wizgates",
+        //     method(){}
+        // } 
+
+        // This person has properties and we can add a method which is also a function to perform some action on this object.
+        // Different ways to acces it properties are
+        // name.person 
+        //person["name"]
+        // this.name
+
+
+
+        console.log('============ Q No 8 ==============')
+        /* How to check how many letters are in a string? */
+
+        //String has js function which can be used to check how many letters in strings " string.lenght " ;
+
+        console.log('============ Q No 9 ==============')
+        /* What would be the result of 100 == '101' and 100 != '100' */
+
+        // Result of 100 == '101' will be false and 100 != '100'  will also be false.
+
+        console.log('============ Q No 10 ==============')
+        /* What is the method to check if any string ends with any specific letter? */
+
+        // " endsWith() "  is method that we can use to check if a string ends with a specific letter.
+
+        console.log('============ Q No 11 ==============')
+        /* What is an array and explain with an example by writing down an array of the first 10 positive integers? And access the 5th value in an array */
+
+        // Array is a kind od a special variable that can store many values at once, 
+        // array and accesing its values
+        // number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        // console.log(number[4]);
+        // As array indexing starts from 0, so we can access value of array index.
+
+        console.log('============ Q No 12 ==============')
+        /* How to add and remove values from an array? Explain with a code example. */
+
+        //There are different ways to adding and removing values from an array like push, pop and shift.
+        // number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        // number.push(11);
+        // number.pop();
+
+        console.log('============ Q No 13 ==============')
+        /* What is a boolean and what would be the result of 0 and null in boolean? */
+
+        // Boolean datatype returns only two values true and false.0 and null in boolean both are considered falsy so they will return false.
+
+
+        console.log('============ Q No 14 ==============')
+        /* Write a program that prints "Hello, world!" to the console. */
+
+        // function myfunction(){
+        //     console.log("Hello, world!");
+        // }
+        // myfunction();
+
+
+        console.log('============ Q No 15 ==============')
+        /*  Write a function that takes a number as input and checks if it is a prime number. Return true if it is, false otherwise. */
+
+        // function primeCheck() {
+        //     let number = parseInt(prompt("Enter a number:"));
+
+        //     if (number < 2) {
+        //         console.log("It is not a prime number");
+        //     } else {
+        //         let isPrime = true;
+
+        //         for (let i = 2; i <= Math.sqrt(number); i++) {
+        //             if (number % i === 0) {
+        //                 isPrime = false;
+        //                 break;
+        //             }
+        //         }
+
+        //         if (isPrime) {
+        //             console.log("Number is a prime number");
+        //         } else {
+        //             console.log("Number is not a prime number");
+        //         }
+        //     }
+        // }
+
+        // primeCheck();
+
+        console.log('============ Q No 16 ==============')
+        /*  Write a function that takes a number as input and checks if it is an even number. Return true if it is, false otherwise. */
+
+        // function numberCheck(){
+        //    let number = parseInt(prompt("Enter a number:"));
+        //    if ( number % 2 == 0){
+        //    console.log("true");
+        //    }
+        //    else {
+        //    console.log("false");
+        //    }
+
+        // }
+        // numberCheck();
+
+
+        console.log('============ Q No 17 ==============')
+        /* Write a function that takes a number as input and returns its factorial */
+
+        // function factorial() {
+        //    let number = parseInt(prompt("Enter a number:"));
+
+        //     let result = 1;
+        //     for (let i = 2; i <= number; i++) {
+        //         result *= i;
+        //     }
+
+        //     console.log(`The factorial is: ${result}`);
+        // }
+
+        // factorial();
+
+
+        console.log('============ Q No 18 ==============')
+        /*Write a function that takes a number as input and checks if it is a perfect square. Return true if it is, false otherwise */
+
+        // function squareCheck() {
+
+        //     let number = parseInt(prompt("Enter a number:"));
+        //     a = Math.sqrt(number);
+        //     if (number == a * a) {
+        //         alert("The Number is a perfect square")
+        //     }
+        //     else {
+        //         alert("The Number is not a perfect square")
+        //     }
+        // }
+        // squareCheck();
+
+
+        console.log('============ Q No 19 ==============')
+        /* Write a function that takes two numbers as input and returns the larger of the two? */
+
+        // function numberCheck() {
+
+        //     let a = parseInt(prompt("Enter First Number:"));
+        //     let b = parseInt(prompt("Enter Second Number:"));
+
+        //     if (a > b) {
+        //         console.log("First number is bigger than second.")
+        //     }
+        //     else {
+        //         console.log("Second number is bigger than First.")
+        //     }
+
+        // }
+        // numberCheck();
+
+
+        console.log('============ Q No 20 ==============')
+        /* Write a program that prompts the user for their name and then prints "Hello, [name]!" to the console. */
+
+        // function nameCheck() {
+        //     let name = prompt('Please enter your Name');
+        //     console.log(`Hello, ${name}!`);
+        // }
+        // nameCheck()
+
+    </script>
+</body>
+
+</html>

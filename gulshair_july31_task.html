@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const employees_data = {
+            "employee1": {
+                "name": "John Doe",
+                "age": 30,
+                "position": "Software Engineer",
+                "salary": 60000,
+                "contact": {
+                    "email": "john.doe@example.com",
+                    "phone": "123-456-7890"
+                }
+            },
+            "employee2": {
+                "name": "Jane Smith",
+                "age": 28,
+                "position": "Product Manager",
+                "salary": 70000,
+                "contact": {
+                    "email": "jane.smith@example.com",
+                    "phone": "987-654-3210"
+                }
+            }
+        }
+
+        // 1 - Add a new employee3 in it having properties as given below
+        // name: "Alice Johnson",
+        //     age: 25,
+        //         position: "UX Designer",
+        //             salary: 55000,
+        //                 and "contact" as object having two attributes as email: "alice.johnson@example.com",
+        //                     phone: "555-123-4567"
+
+        let addNewEmployee = () => {
+
+            employees_data["employee3"] = {
+                "name": "Alice Johnson",
+                "age": 25,
+                "position": "UX Designer",
+                "salary": 55000,
+                "contact": {
+                    "email": "alice.johnson@example.com",
+                    "phone": "555-123-4567"
+                }
+            }
+        }
+
+        addNewEmployee();
+        // 2 - Update salary of employee 2 to 75000
+
+        let update_employee_2 = () => {
+            if (employees_data["employee2"]) {
+                employees_data["employee2"].salary = 75000;
+            }
+        }
+
+        update_employee_2();
+
+        // 3 - Remove phone number from employee 1 details.
+
+        let remove_phone_number = () => {
+
+            delete employees_data.employee1.contact.phone;
+        }
+
+        remove_phone_number();
+
+        console.log(employees_data);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JavaScript Practice exercises</h2>
+
+    <script>
+        console.log('============ Q No 1 ==============')
+        /* Write a function that takes an array of numbers as a parameter and returns the average of those numbers */
+
+        // function Avg(arr) {
+        //     let sum = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         sum += arr[i];
+        //     }
+        //     return sum / arr.length;
+        // }
+
+        // const arr = [5, 10, 15, 20, 25];
+        // let result = Avg(arr);
+        // console.log("Average of the given array is: " + result);
+
+        console.log('============ Q No 2 ==============')
+        /* Write a function that takes a string as a parameter and returns the number of vowels in the string */
+
+        // function Checkvowels(str) {
+        //     const vowels = ["a", "e", "i", "o", "u"];
+        //     count = 0;
+        //     for (let char of str) {
+        //         if (vowels.includes(char)) {
+        //             count++;
+        //         }
+        //     }
+        //     return count;
+        // }
+
+        // str = "how are you doing and whats hapenning?";
+        // let result = Checkvowels(str);
+        // console.log(result);
+
+        console.log('============ Q No 3 ==============')
+        /* Write a function that takes an array of numbers as a parameter and returns a new array with only the even numbers from the original array*/
+
+        // function Checkeven(arr) {
+        //     let arr1 = [];
+        //     for (let numbers of arr) {
+        //         if (numbers % 2 == 0) {
+        //             arr1.push(numbers);
+        //         }
+        //     }
+        //     return arr1;
+        // }
+        // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // let result = Checkeven(arr);
+        // console.log(result);
+
+        console.log('============ Q No 4 ==============')
+        /* Write a function that takes a number as a parameter and returns true if the number is prime, and false otherwise*/
+
+
+        // function Checkprime(number) {
+        //     for (let i = 2; i < number / 2; i++) {
+        //         if (number % i == 0) {
+        //             return false;
+        //         }
+        //     }
+        //     return true;
+        // }
+
+        // console.log(Checkprime(24));
+
+        console.log('============ Q No 5 ==============')
+        /* Write a function that takes a sentence as a parameter and returns the longest word in the sentence.*/
+
+        // function Longestword(sentence) {
+
+        //     let words = sentence.split(' ');
+        //     let longestWord = "";
+
+        //     for (word of words) {
+        //         if (word.length > longestWord.length) {
+        //             longestWord = word;
+        //         }
+        //     }
+
+        //     return longestWord;
+        // }
+        // const sentence = "Mxyzsplix is an amazing protagonist of superman";
+        // const result = Longestword(sentence);
+        // console.log(result);
+
+        console.log('============ Q No 6 ==============')
+        /* Using a for loop, calculate the sum of all the numbers from 1 to 100*/
+
+        // let sum = 0;
+
+        // for (let i = 0; i <= 100; i++){
+        //     sum += i;
+        // }
+        // console.log('sum = ' + sum);
+
+        console.log('============ Q No 7 ==============')
+        /* Write a function that takes two arrays as parameters and returns a new array containing only the elements that are present in both arrays.*/
+
+        // function Intersection(array1, array2) {
+        //     const sameNumbers = [];
+        //     for (let i = 0; i < array1.length; i++) {
+        //         const numbers = array1[i];
+        //         if (array2.includes(numbers)) {
+        //             sameNumbers.push(numbers);
+        //         }
+        //     }
+        //     return sameNumbers;
+        // }
+        // const array1 = [1, 2, 3, 4, 5, 7, 8];
+        // const array2 = [4, 5, 6, 7, 8];
+        // const commonElements = Intersection(array1, array2);
+        // console.log(commonElements)
+
+        console.log('============ Q No 8 ==============')
+        /* Write a function that takes a string as input and returns the number of occurrences of a specific character in the string.*/
+
+        // function countCharacterOccurrences(str, char) {
+        //     let count = 0;
+
+        //     for (let i = 0; i < str.length; i++) {
+        //         if (str[i] === char) {
+        //             count++;
+        //         }
+        //     }
+
+        //     return count;
+        // }
+
+        // // Example usage
+        // const inputString = "Hello, how are you?";
+        // const characterToCount = "o";
+
+        // const occurrenceCount = countCharacterOccurrences(inputString, characterToCount);
+
+        // console.log(`Number of occurrences of "${characterToCount}" in "${inputString}": ${occurrenceCount}`);
+
+        console.log('============ Q No 9 ==============')
+        /* Write a function that takes an array of strings as input and returns a new array with the strings sorted in alphabetical order*/
+
+
+        // function sortStringsAlphabetically(strings) {
+        //     return strings.slice().sort();
+        // }
+
+        // const inputStrings = ["banana", "apple", "orange", "kiwi"];
+        // const sortedStrings = sortStringsAlphabetically(inputStrings);
+
+        // console.log("Original Array:", inputStrings);
+        // console.log("Sorted Array:", sortedStrings);
+
+        console.log('============ Q No 10 ==============')
+        /* Write a function that takes a number as input and returns true if it is a perfect square, and false otherwise.*/
+
+        // function isPerfectSquare(number) {
+        //     const squareRoot = Math.sqrt(number);
+        //     return squareRoot === Math.floor(squareRoot);
+        // }
+
+        // console.log(isPerfectSquare(25));
+
+
+
+
+    </script>
+</body>
+
+</html>

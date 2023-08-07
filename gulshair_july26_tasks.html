@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        console.log('============ Q No 1 ==============')
+        /*Write a function that takes an array of numbers as input and returns the highest sum that can be obtained by summing any combination of numbers in the array, without using consecutive numbers.*/
+
+        // function findHighestSum(arr) {
+
+        //     let highestSum = arr[0] + arr[1];
+
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let j = i + 1; j < arr.length; j++) {
+        //             const currentSum = arr[i] + arr[j];
+        //             highestSum = Math.max(highestSum, currentSum);
+        //         }
+        //     }
+
+        //     console.log(highestSum);
+        // }
+        // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // findHighestSum(arr);
+
+
+        console.log('============ Q No 2 ==============')
+        /* Implement a function that determines if a given string of parentheses is balanced. The function should return true if the parentheses are balanced, and false otherwise. For example, "((()))" is balanced, while "(()" is not.*/
+
+        // function balancedParentheses(str) {
+        //     let startingParenthesesSign = 0;
+        //     let endingParenthesesSign = 0;
+
+        //     for (let i = 0; i < str.length; i++) {
+        //         let parentheses = str[i];
+
+        //         if (parentheses === '(') {
+        //             startingParenthesesSign++;
+        //         } else if (parentheses === ')') {
+        //             endingParenthesesSign++;
+        //         }
+        //     }
+
+        //     return startingParenthesesSign === endingParenthesesSign;
+        // }
+
+        // const str = "((()))";
+        // console.log(balancedParentheses(str)); 
+
+        console.log('============ Q No 3 ==============')
+        /* Write a function that takes an array of integers as input and returns the longest increasing subarray within the array. An increasing subarray is a sequence of consecutive numbers that are in ascending order.*/
+
+
+        // function longestIncreasingSubarray(arr) {
+        //     let start = 0;
+        //     let end = 0;
+        //     let maxStart = 0;
+        //     let maxEnd = 0;
+
+        //     for (let i = 1; i < arr.length; i++) {
+        //         if (arr[i] > arr[i - 1]) {
+        //             end = i;
+        //         } else {
+        //             if (end - start > maxEnd - maxStart) {
+        //                 maxStart = start;
+        //                 maxEnd = end;
+        //             }
+        //             start = i;
+        //             end = i;
+        //         }
+        //     }
+
+        //     if (end - start > maxEnd - maxStart) {
+        //         maxStart = start;
+        //         maxEnd = end;
+        //     }
+
+        //     return arr.slice(maxStart, maxEnd + 1);
+        // }
+
+        // const arr = [1, 2, 3, 0, 1, 2, 3, 4, 5, 1, 2, 3];
+        // const longestSubarray = longestIncreasingSubarray(arr);
+        // console.log(longestSubarray);
+
+
+        console.log('============ Q No 4  ==============')
+        /*  Implement a function that finds the first non-repeated character in a given string. The function should return the character. If no non-repeated character is found, return null. */
+
+        // function nonrepeatedCharacter(str) {
+        //     for (var i = 0; i < str.length; i++) {
+
+        //         let char = str[i];
+
+        //         if (str.indexOf(char) === str.lastIndexOf(char)) {
+        //             return char;
+        //         }
+
+        //     }
+        //     return null;
+        // }
+
+        // let str = "How are you doing?"
+        // console.log(nonrepeatedCharacter(str));
+
+        console.log('============ Q No 5  ==============')
+        /*   Create a function that generates a random password of a given length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters. */
+
+
+        // function randomPassword(passwordLength) {
+        //     const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-+=[]{}|;:,.<>?";
+        //     let password = "";
+
+        //     for (let i = 0; i < passwordLength; i++) {
+        //         const randomIndex = Math.floor(Math.random() * charset.length);
+        //         password += charset[randomIndex];
+        //     }
+
+        //     console.log(password);
+        // }
+
+        // const passwordLength = 6;
+        // randomPassword(passwordLength);
+
+
+        console.log('============ Q No 6  ==============')
+        /* Write a function that determines the number of occurrences of a specific word in a given text. The function should not be case-sensitive and should count the occurrences even if the word appears as part of another word. */
+
+        // function countWordOccurrences(text, word) {
+
+        //     const lowercaseText = text.toLowerCase();
+        //     const lowercaseWord = word.toLowerCase();
+        //     const words = lowercaseText.split(/\W+/);
+        //     let count = 0;
+
+        //     for (const currentWord of words) {
+        //         if (currentWord === lowercaseWord) {
+        //             count++;
+        //         }
+        //     }
+
+        //     console.log(`${word} is occured ${count} times in given string`);
+        // }
+
+        // const text = "This is a sample text. The text contains the word sample multiple times.";
+        // const word = "sample";
+        // countWordOccurrences(text, word);
+
+
+        console.log('============ Q No 7  ==============')
+        /* Implement a function that takes an array of integers as input and returns a new array containing only the elements that appear an odd number of times. */
+
+        // function oddOccurrences(arr) {
+        //     const occurrences = {};
+
+        //     for (const number of arr) {
+        //         occurrences[number] = (occurrences[number] || 0) + 1;
+        //     }
+
+        //     const oddOccurrencesElements = [];
+
+        //     for (const number of arr) {
+        //         if (occurrences[number] % 2 !== 0) {
+        //             oddOccurrencesElements.push(number);
+        //         }
+        //     }
+
+        //     console.log(oddOccurrencesElements);
+        // }
+
+        // const arr = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5,];
+        // oddOccurrences(arr);
+
+        console.log('============ Q No 9  ==============')
+        /* Create a function that generates a unique identifier string with a given length. The identifier should consist of random alphanumeric characters. */
+
+
+        // function uniqueIdentifier(length) {
+        //     const charset = "abcdefghijklmnopqrstuvwxyz0123456789";
+        //     let alphaNumericCharacters = "";
+
+        //     for (let i = 0; i < length; i++) {
+        //         const randomIndex = Math.floor(Math.random() * charset.length);
+        //         alphaNumericCharacters += charset[randomIndex];
+        //     }
+
+        //     console.log(alphaNumericCharacters);
+        // }
+
+        // const length = 12;
+        // uniqueIdentifier(length);
+
+
+        console.log('============ Q No 10  ==============')
+        /* Implement a function that converts a decimal number into its binary representation as a string. */
+
+        // function decimalToBinary(decimal) {
+
+        //     let binary = "";
+
+        //     while (decimal > 0) {
+        //         const remainder = decimal % 2;
+        //         binary = remainder + binary;
+        //         decimal = Math.floor(decimal / 2);
+        //     }
+
+        //     console.log(binary);
+        // }
+
+        // const decimal = 42;
+        // decimalToBinary(decimal);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

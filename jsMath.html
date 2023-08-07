@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice.css">
+
+</head>
+
+<body>
+    <div>
+        <h2>Making a new webPage</h2>
+        <button onclick="rnum()">Generate a Random number</button>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        // document.getElementById("demo").innerHTML = Math.round(15.8);
+
+        // document.getElementById("demo").innerHTML = Math.pow(2,5);
+
+        //  document.getElementById("demo").innerHTML = Math.sqrt(25);
+
+        // document.getElementById("demo").innerHTML = Math.log(25);
+
+        function rnum(){
+            document.getElementById("demo").innerHTML = Math.floor(Math.random()*100);
+        }
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Test Instructions:</h2>
+    <p>Read the statement of question and write your code accordingly. You can pass arguements to functions directly
+        while calling function from inside button and check result upon clicking on button. Result should be printed in
+        console using console.log()</p>
+    <button onclick="checkIsBookAvailable('Tafseer Al-Qurtubi')">Execute Fn 1</button>
+    <button onclick="getTotalNumberOfBooksAvailable()">Execute Fn 2</button>
+    <button onclick="getBookTitleByAuthor('Imam Al-Qurtubi')">Execute Fn 3</button>
+    <button onclick="calculateAveragePriceOfProductsByCategoryId()">Execute Fn 4</button>
+    <button onclick="getStudentInfo()">Execute Fn 5</button>
+    <button onclick="printAllSubjectsWhichAreOnOddIndex()">Exe cute Fn 6</button>
+
+    <script>
+        const library = {
+            "name": "Islamic Knowledge Center",
+            "address": "Muslim Street",
+            "categories": [{
+                "id": 1,
+                "name": "Tafseer",
+                "books": [{
+                    "id": 1,
+                    "title": "Tafseer Al-Qurtubi",
+                    "author": {
+                        "name": "Imam Al-Qurtubi",
+                        "birthYear": 1214,
+                        "deathYear": 1273
+                    },
+                    "availability": true,
+                    "genres": ["Tafseer", "Quranic Studies"]
+                },
+                {
+                    "id": 2,
+                    "title": "Tafseer Ibn Kathir",
+                    "author": {
+                        "name": "Ibn Kathir",
+                        "birthYear": 1300,
+                        "deathYear": 1373
+                    },
+                    "availability": true,
+                    "genres": ["Tafseer", "Islamic Studies"]
+                }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Seerah",
+                "books": [{
+                    "id": 3,
+                    "title": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)",
+                    "author": {
+                        "name": "Safi-ur-Rahman al-Mubarakpuri",
+                        "birthYear": 1943,
+                        "deathYear": 2006
+                    },
+                    "availability": true,
+                    "genres": ["Biography", "Seerah"]
+                }]
+            }
+            ]
+        }
+
+        const checkIsBookAvailable = (bookTitle) => {
+
+            let book = library.categories.flatMap(category => category.books).find(book => book.title === bookTitle);
+            if (book) {
+               console.log(true);
+            } else {
+                console.log(false);
+            }
+
+            console.log('Function 1 executed.');
+            // Q no 1. Implement a JavaScript function that checks if a specific book is available in the library. The function should take the book title as input and print a boolean value indicating its availability
+            // Expected output: true/false.
+        }
+
+        const getTotalNumberOfBooksAvailable = () => {
+            
+            let totalNumberofBooks = library.categories.flatMap(category => category.books).length;
+            console.log(totalNumberofBooks);
+            console.log('Function 2 executed.');
+            // Q no 2. Write a JavaScript function that takes the data set as input and print the total number of books available in the library.
+            // Expected output: number value
+        }
+
+        const getBookTitleByAuthor = (authorName) => {
+
+            let booksByAuthorName = library.categories.flatMap(category => category.books).filter(book => book.author.name === authorName);
+
+            console.log(booksByAuthorName);
+
+
+            console.log('Function 3 executed.');
+            // Q no 3. Write a JavaScript function that takes an author’s name as input and print an array of book titles written by that author.
+            // Expected output: Array of books title
+        }
+
+        const calculateAveragePriceOfProductsByCategoryId = () => {
+
+            let genreCount = {};
+            
+            library.categories.forEach(category => {
+                
+                
+            });
+
+            console.log('Function 4 executed.');
+            // Q no 4. Implement a JavaScript function that calculates and returns the total number of books in each genre. The function should print an object where each genre is a property, and its value is the count of books belonging to that genre.
+            /*
+                Example of expected output: {
+                    "genre name": 3
+                }
+            */
+
+        }
+
+        const getStudentInfo = (name, mail, StudentInterests) => {
+
+            const Student = {
+                name: 'jsmith',
+                mail : 'jsmith@example.com',
+                StudentInterests : ["coding", "hiking", "photography"]
+
+            }
+            console.log(Student);
+            console.log('Function 5 executed.');
+            // Q no 5. Create a function getStudentInfo that takes a student's name, age, and course as parameters and print an object with the student's information.
+            // Expected Output:
+            // {
+            //   username: "jsmith",
+            //   email: "jsmith@example.com",
+            //   interests: ["coding", "hiking", "photography"]
+            // }
+        }
+
+        const printAllSubjectsWhichAreOnOddIndex = () => {
+            console.log('Function 6 executed.');
+            // Q no 6. Return an array of all subjects which are present on odd index
+            const input = {
+                username: "Gull",
+                email: "gull@example.com",
+                course: {
+                    subjects: ["math", "science", "chemistry", 'physics', 'biology', 'computer science']
+                }
+            }
+
+            let oddInstancesSubjects = input.course.subjects.filter((subject, index) => index % 2 !== 0);
+            console.log(oddInstancesSubjects);
+
+            // Expected Output:
+            // ["science", 'physics', 'computer science']
+        }
+    </script>
+</body>
+
+</html>
